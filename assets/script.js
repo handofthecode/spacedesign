@@ -1,6 +1,6 @@
 $(function() {
 
-  $('document').click(function(e) {
+  $('.team').click(function(e) {
     var $link = $(e.target).closest('a')
     var scrollTop = $(window).scrollTop();
 
@@ -33,9 +33,8 @@ $(function() {
 
   $(document).keyup(function(e) {
      if ($('.modal').filter(':visible').length > 0 && e.key === 'Escape') {
-       $('.modal').filter(':visible').slideUp();
-       $('#tint').fadeOut(400);
+       $('.close').trigger('click');
      }
-
-  })
+  });
+  
 });
