@@ -8,7 +8,7 @@ $(function() {
       e.preventDefault();
       $('#tint').fadeIn(400);
 
-      var $modal = $('#' + $link.attr('target-modal'));
+      var $modal = $('#' + $link.attr('data-target-modal'));
       $modal.slideDown().css({top: scrollTop + 40});
 
     } else if ($link.hasClass('close') || $(e.target).is($('#tint'))) {
